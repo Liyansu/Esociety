@@ -1,0 +1,9 @@
+app.get("/logout", (req, res) => {
+	req.logout(
+		req.user, err => {
+			
+			res.redirect("/");
+		  }
+	);
+	req.session.isAuth = false;
+});
